@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Stream</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 780px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      #chatstream {
+        margin-bottom: 2%;
+        min-height: 600px;
+        overflow-y: scroll;
+        overflow-x: auto;
+      }
+
+      .borderstd {
+          border: 1px solid #EEEEEE;
+      }
+    </style>
+  </head>
+
+  <body onload="init()">
+    
+    <div class="container">
+        <h2 style="margin-bottom: 20px;">Calculate Stream</h2>
+      <div id="chatstream" class="borderstd"></div>
+      <div id="form-input" class="borderstd">
+        <form method="post" action="#" id="formInput">
+          <h2>Calculate</h2>
+          <div style="margin-bottom: 20px;">
+            <label>Operand 1:</label>
+            <input type="text" name="operand1" />
+
+            <label>Operand 2:</label>
+            <input type="text" name="operand2" />
+
+            <label>Operation:</label>
+            <select name="operator">
+                <option value="+">Add</option>
+                <option value="-">Sub</option>
+                <option value="*">Multiply</option>
+              </select>
+          </div>
+          <div style="margin-left: auto; margin-right: auto;">
+              <input type="button" value="Submit" onclick="submitForm()"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </body>
+</html>
